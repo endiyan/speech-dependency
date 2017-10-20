@@ -1,5 +1,9 @@
 #!/bin/bash
 
+
+#how-to
+#./prep.sh path-to-file-in-other-format.mp3
+
 #extracting the filename
 
 filename=$(basename "$1")
@@ -11,6 +15,7 @@ path=$(dirname "$1")
 #echo $extension
 #echo $path
 
-#audio conversion
-ffmpeg -i $1 "$path/$filename.flac"
+#convert audio to flac then save with the same file name
+ffmpeg -i $1 -ac 1 "$path/$filename.flac"
+
 

@@ -2,3 +2,5 @@ env/
 env/*
 resources/
 resources/*
+credential/
+credential/*
