@@ -16,6 +16,6 @@ path=$(dirname "$1")
 #echo $path
 
 #convert audio to flac then save with the same file name
-ffmpeg -i $1 -ac 1 "$path/$filename.flac"
+ffmpeg -i $1 -ac 1 -sample_fmt s32 "$path/$filename.flac"
 
 
